@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LKPD REZY</title>
+</head>
+<body>
+    <h1 style="color:blue;">LOGIN DULU GUYS</h1>
+
+    <form action="/submit-form" method="post">
+        <label for="first_name">First Name:</label> <br>
+        <input type="text" id="first_name" name="first_name" placeholder="Masukan nama depan">
+        <br>
+        <label for="last_name">Last Name:</label> <br>
+        <input type="text" id="last_name" name="last_name" placeholder="Masukan nama belakang">
+        <br><br>
+        <button type="button" id="btn">Submit</button>
+    </form>
+
+    <script src="dist/sweetalert2.all.js"></script>
+    <script>
+        const btn = document.getElementById('btn');
+        btn.addEventListener('click', function() {
+            Swal.fire({
+                title: "Are you sure?",
+                text: "You won't be able to revert this!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Yes, submit it!"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire({
+                        title: "Submitted!",
+                        text: "Your form has been submitted.",
+                        icon: "success"
+                    }).then(() => {
+                        document.querySelector('form').submit();
+                    });
+                }
+            });
+        });
+    </script>
+
+   
+
+    <style>
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      
+      td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+      
+      tr:nth-child(even) {
+        background-color: #dddddd;
+      }
+      </style>
+      </head>
+      <body>
+      
+      <h2>teman teman ku tercinta</h2>
+      
+      <table>
+        <tr>
+          <th>NAMA SISWA</th>
+          <th>NISN</th>
+          <th>ALAMAT</th>
+        </tr>
+        <tr>
+          <td>Rezy Ahmad Fauzy</td>
+          <td>08112233</td>
+          <td>JELUPANG CITY</td>
+        </tr>
+        <tr>
+          <td>Fahri Wahyu Juniarto</td>
+          <td>08112233</td>
+          <td>JELUPANG CITY</td>
+        </tr>
+        <tr>
+          <td>Danish Arfan</td>
+          <td>08112233</td>
+          <td>JELUPANG CITY</td>
+        </tr>
+        <tr>
+          <td>Farell Adrian</td>
+          <td>08112233</td>
+          <td>JELUPANG CITY</td>
+        </tr>
+        <tr>
+          <td>Rian Sebastian</td>
+          <td>08112233</td>
+          <td>JELUPANG CITY</td>
+        </tr>
+      </table>
+</body>
+</html>
